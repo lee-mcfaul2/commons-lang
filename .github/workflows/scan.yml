@@ -845,7 +845,7 @@ jobs:
           # workflow_dispatch of build-container.yml below still
           # fires (dispatches aren't suppressed by skip-ci).
           git commit \
-            -m 'Regenerate Dockerfile via slsa-maven scan [skip ci]' \
+            -m 'Regenerate Dockerfile via slsa-maven scan' \
             -m "Apt mirror: ${APT_MIRROR_URL}" \
             -m "Snapshot timestamp: ${SNAPSHOT_TS}" \
             -m 'Every apt and Maven byte verified by SHA256.'

@@ -72,7 +72,6 @@ RUN set -eux \
       libcap-ng0=0.8.5-4build5 \
       libcom-err2=1.47.2-3ubuntu4 \
       libcrypt1=1:4.5.1-1 \
-      libcurl3t64-gnutls=8.18.0-1ubuntu2 \
       libcurl4t64=8.18.0-1ubuntu2 \
       libdb5.3t64=5.3.28+dfsg2-10ubuntu1 \
       liberror-perl=0.17030-1 \
@@ -180,7 +179,6 @@ RUN set -eux \
       '83a2a924c11759a2ed6e6f98f456d28e1b026974ce9e6e7ef12c9ac43b2d543e  libnettle8t64_3.10.2-1_amd64.deb' \
       '858242571fc2585c1f8eb83ae01d020f0f4a92679d0de8fe31146f6687bdd84a  libbrotli1_1.2.0-3build1_amd64.deb' \
       '858a1ddd299cff3932bcc7085d16535f5b5140d15f6d84bd1b94b4a2a6c456b2  libcurl4t64_8.18.0-1ubuntu2_amd64.deb' \
-      '866fd07f5d3367fa42f1b0957007478b110f30918c08bedff566a2d6217bc3da  libcurl3t64-gnutls_8.18.0-1ubuntu2_amd64.deb' \
       '88c0163f1acb384abde07641b7e13fcaea36e0a3b88fc57a653779fc429fc46a  libunistring5_1.3-2build1_amd64.deb' \
       '8d3a361e8655a0ff4a390243059949fa6f22d42d0e266f58b57c124eb21d2993  libldap2_2.6.10+dfsg-1ubuntu5_amd64.deb' \
       '919b209f5040c1dca1d9c3912521e4bc476028c2e16905ab09347004a599a722  libldap-common_2.6.10+dfsg-1ubuntu5_all.deb' \

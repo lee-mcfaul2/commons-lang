@@ -230,7 +230,7 @@ jobs:
         #             gradle-module-metadata-maven-plugin
         #             declaration. If absent (the common case for
         #             Apache Commons projects and most Maven
-        #             projects), drop a `.no-module-published`
+        #             projects), drop a `MODULE-NOT-PUBLISHED`
         #             sentinel so the upload step has something to
         #             upload; verify will see the sentinel on both
         #             passes and skip cleanly. If declared but no
@@ -287,7 +287,7 @@ jobs:
                 cp "target/${ARTIFACT_ID}-${VERSION}.module" "dist/"
               else
                 echo "Project does not declare gradle-module-metadata-maven-plugin — pair runs as no-op."
-                touch dist/.no-module-published
+                touch dist/MODULE-NOT-PUBLISHED
               fi
               ;;
             *)
@@ -361,10 +361,10 @@ jobs:
         if: matrix.artifact == 'module'
         run: |
           set -eu
-          if [ -f pass1/.no-module-published ] && [ -f pass2/.no-module-published ]; then
+          if [ -f pass1/MODULE-NOT-PUBLISHED ] && [ -f pass2/MODULE-NOT-PUBLISHED ]; then
             echo "Project does not publish .module — verify is a no-op."
             echo "skip=true" >> "$GITHUB_OUTPUT"
-          elif [ -f pass1/.no-module-published ] || [ -f pass2/.no-module-published ]; then
+          elif [ -f pass1/MODULE-NOT-PUBLISHED ] || [ -f pass2/MODULE-NOT-PUBLISHED ]; then
             echo "FAIL: one pass published .module, the other didn't." >&2
             ls -la pass1/ pass2/ >&2
             exit 1
